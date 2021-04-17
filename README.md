@@ -1,4 +1,4 @@
-# my-project
+# Large-scale applications with Vue 3 TypeScript
 
 ## Project setup
 ```
@@ -23,8 +23,5 @@ npm run test:unit
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-Large-scale applications with Vue 3 TypeScript
-
-Chapter 1 - Preparing the project with Vue-CLI
 
 
