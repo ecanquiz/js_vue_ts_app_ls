@@ -41,6 +41,7 @@ export default createStore({
             commit('loadedItems', data)
           })       
       },1000)
+      
     },
     selectItem({ commit }, params: {
       id: number
