@@ -8,7 +8,8 @@
 </template>
 <script lang="ts">
   import { defineComponent, reactive, computed, onMounted } from 'vue'
-  import store from'@/store'
+  import{ useItemsStore } from'@/store/items'
+  import { MutationType, StoreModuleNames } from '@/models/store'
   import ItemsListComponent from '@/components/items/ItemsList.component.vue'
   import { ItemInterface } from '@/models/items/Item.interface'
 
@@ -18,26 +19,26 @@
       ItemsListComponent
     },
     setup() {
-    
-      const items = computed(() => {
-        return store.state.items
+      const itemsStore = useItemsStore()    
+      const items = computed(() => {        
+        return itemsStore.state.items
       })
       
       const loading = computed(() => {
-        return store.state.loading
+        return itemsStore.state.loading
       })
       
-      onMounted(() => {
-        store.dispatch('loadItems')
+      onMounted(() => {        
+        itemsStore.action(MutationType.items.loadItems)
       })
 
       const onSelectItem = (item: ItemInterface) => {
-        store.dispatch('selectItem', {
+        itemsStore.action(MutationType.items.selectItem, {
           id: item.id,
-          selected:!item.selected
+          selected: !item.selected
         })
       }
-      
+
       return {
         items,
         loading,

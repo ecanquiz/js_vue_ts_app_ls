@@ -3,7 +3,7 @@ import { ItemInterface } from '@/models/items/Item.interface'
 /**
  * @name ItemsStateInterface
  * @description
- * Interface para el estado de Items
+ * Interface for the Items state
  */
 export interface ItemsStateInterface {
   loading: boolean

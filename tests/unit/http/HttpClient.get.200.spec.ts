@@ -6,8 +6,7 @@ import { MockedPromiseFactory } from './MockedPromiseFactory'
 
 const mockParams: HttpRequestParamsInterface = {
   url: 'path/to/a/get/api/endpoint',
-  requiresToken:
-  false
+  requiresToken: false
 }
 
 describe('HttpClient.get', () => {
