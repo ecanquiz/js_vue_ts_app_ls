@@ -19,7 +19,9 @@
       ItemsListComponent
     },
     setup() {
-      const itemsStore = useItemsStore()    
+    
+      const itemsStore = useItemsStore()
+       
       const items = computed(() => {        
         return itemsStore.state.items
       })
