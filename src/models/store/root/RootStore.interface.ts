@@ -1,6 +1,5 @@
-import {
-  ItemsStateInterface
-} from '../items/ItemsState.interface'
+import { ItemsStateInterface } from '../items/ItemsState.interface'
+import { LocalesStateInterface } from '../locales/LocalesState.interface'
 
 /**
  * @name RootStoreInterface
@@ -9,6 +8,7 @@ import {
  */
 export interface RootStoreInterface {
   itemsState: ItemsStateInterface
+  localesState: LocalesStateInterface
   // Additional domain-specific module interfaces will be added here in subsequent chapters
 }
 
