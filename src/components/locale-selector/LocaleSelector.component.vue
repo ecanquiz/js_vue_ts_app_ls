@@ -4,7 +4,7 @@
       <LocaleFlagRadio
         v-for="(localeInfo, index) in availableLocales"
         :key="index"
-	      :localeInfo="localeInfo"
+        :localeInfo="localeInfo"
       	@clicked="onFlagClicked"
       />
     </div>
