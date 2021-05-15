@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <div class="long-date">{{ i18n.d((new Date()), 'long') }}</div>
     <h2>{{ i18n.t('welcome') }}</h2>
     
     <LocaleSelector
@@ -59,10 +60,15 @@
     font-family: Avenir,Helvetica,Arial,sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    padding:10px;
+    color:#2c3e50;
     text-align: center;
     color: #2c3e50;
     h2 {
       margin:0;
+    }
+    .long-date{
+      font-size:12px;
     }
   }
   #nav {
