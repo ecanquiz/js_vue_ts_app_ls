@@ -4,12 +4,13 @@ import {
   ItemsApiClientModel
 } from '@/models/api-client/items'
 
-const urls: ItemsApiClientUrlsInterface = {
-  fetchItems: '/ruta/a/un/endpoint/de/api/real'
-}
+import { config } from '@/config'
+
+// urls for this API client
+const urls: ItemsApiClientUrlsInterface = config.items.apiUrls
   
 // we instantiate ItemsApiClient pointing to the URL that returns real data
 const itemsApiClient: ItemsApiClientInterface = new ItemsApiClientModel(urls)
-  
+// export our instance  
 export default itemsApiClient
 
